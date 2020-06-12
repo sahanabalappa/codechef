@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n,c1=0,c2=0,mlp=1,ml=0;
+	cin>>n;
+	while(n--)
+	{
+		int s1,s2;
+		cin>>s1>>s2;
+		
+		c1+=s1;
+		c2+=s2;
+		int cl=0;
+		int clp=1;
+		if(c1>=c2)
+		{
+			cl=c1-c2;
+		}
+		else
+		{
+			clp=2;
+			cl=c2-c1;
+		}
+		if(cl>ml)
+		{
+			ml=cl;
+			mlp=clp;
+		}
+	}
+	cout<<mlp<<" "<<ml;
+		
+	return 0;
+}
